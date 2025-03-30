@@ -7,7 +7,7 @@ from PIL.Image import Resampling
 import pytesseract
 import matplotlib.pyplot as plt
 
-model = tf.keras.models.load_model('../Model/Receipts+invoicesandReceiptsv2400x400px_7layers_100epochs_shuffle_128_64filters_learning-rate=0.01_0.01_noise_eluactivation.keras')
+model = tf.keras.models.load_model('../Model/Receipts+invoicesandReceiptsv2400x400px_7layers_50epochs_shuffle_200_100filters_learning-rate=0.01_0.01_noise.keras')
 
 image1 = Image.open('Test Images/1000-receipt.jpg').convert('L').resize((400, 400), Resampling.LANCZOS)
 image1 = np.array(image1)
