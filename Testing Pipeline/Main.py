@@ -8,7 +8,7 @@ import pytesseract
 import matplotlib.pyplot as plt
 
 #Load model
-model = tf.keras.models.load_model('../Model/Receipts+invoicesandReceiptsv2400x400px_7layers_50epochs_shuffle_200_100filters_learning-rate=0.01_0.01_noise.keras')
+model = tf.keras.models.load_model('../Model/Receipts_even_more+invoicesandreciptsv2400x400px_8layers_150epochs_shuffle_200_100filters_learning-rate=0.01_0.01_noise.keras')
 
 #Paths for images
 image1Path = "Test Images/1000-receipt.jpg"
@@ -535,7 +535,7 @@ if not(reconstructed_prediction4 == ""):
 else:
     #Else display that there is no output
     print("***************")
-    print("OCR output metrics for image 4")
+    print("OCR output metrics for image 5")
     print("There is no output")
     print("*************** \n")
 
