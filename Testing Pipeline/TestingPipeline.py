@@ -8,7 +8,7 @@ import pytesseract
 import matplotlib.pyplot as plt
 
 #Load model
-model = tf.keras.models.load_model('../Model/Receipts_even_more+invoicesandreciptsv2400x400px_8layers_150epochs_shuffle_200_100filters_learning-rate=0.01_0.01_noise.keras')
+model = tf.keras.models.load_model('../Model/CAE_Iteration9_150epochs.keras')
 
 #Paths for images
 image1Path = "Test Images/1000-receipt.jpg"

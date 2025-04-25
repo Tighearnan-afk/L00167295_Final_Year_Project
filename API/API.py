@@ -28,7 +28,7 @@ async def upload_file(file: UploadFile):
     #Create noisy image with a variance of 0.001
     noisy_image = ski.util.random_noise(image, mode='gaussian', var=0.001)
     #Load model
-    model = tf.keras.models.load_model('../Model/Receipts_even_more+invoicesandreciptsv2400x400px_8layers_150epochs_shuffle_200_100filters_learning-rate=0.01_0.01_noise.keras')
+    model = tf.keras.models.load_model('../Model/CAE_Iteration9_150epochs.keras')
     #Reconstruct noisy image
     reconstructed_image = model.predict(noisy_image)
     #Reshape reconstructed image to 400x400, removing the batch size dimension(incompatible with pyTesseract)
@@ -56,7 +56,7 @@ async def upload_file(file: UploadFile):
     #Create noisy image with a variance of 0.001
     noisy_image = ski.util.random_noise(image, mode='gaussian', var=0.001)
     #Load model
-    model = tf.keras.models.load_model('../Model/Receipts_even_more+invoicesandreciptsv2400x400px_8layers_150epochs_shuffle_200_100filters_learning-rate=0.01_0.01_noise.keras')
+    model = tf.keras.models.load_model('../Model/CAE_Iteration9_150epochs.keras')
     #Reconstruct noisy image
     reconstructed_image = model.predict(noisy_image)
     #Reshape reconstructed image to 400x400, removing the batch size dimension(incompatible with pyTesseract)
